@@ -1,0 +1,68 @@
+@import './base.css';
+
+#app {
+    max-width: 800px;
+    margin: 0 auto 0;
+    background-color: var(--c-bg);
+    border: 1px solid var(--c-border);
+    border-top: none;
+    filter: drop-shadow(0 0 5px #00000013);
+}
+
+.box {
+    box-sizing: border-box;
+    background-color: var(--c-fg);
+    padding: 1rem;
+}
+
+.error-box {
+    width: 100%;
+    background-color: #ac1e1e;
+    color: #fff;
+    font-weight: 300;
+    border-bottom: 1px solid var(--c-border);
+}
+
+button {
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+button:hover {
+    border-color: #fff;
+}
+
+input {
+    font-family: Geist Mono;
+}
+
+input:focus {
+    outline: 1px solid #00aeff;
+    animation-name: pulse;
+    transition-timing-function: ease-in-out;
+    animation-duration: 0.3s;
+}
+
+select,
+input,
+button {
+    box-sizing: border-box;
+    font-weight: 300;
+    background-color: var(--c-fg);
+    padding: 0.5rem 0.7rem;
+    border: 1px solid var(--c-border);
+    border-radius: 0.3rem;
+    font-weight: 300;
+}
+
+@keyframes pulse {
+    0% {
+        filter: none;
+    }
+    50% {
+        filter: drop-shadow(0 0 2px #0400ff85);
+    }
+    100% {
+        filter: none;
+    }
+}
